@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Content-Only CSS for Guide Pages + Header Styling
+   Applies safely inside <main> + header styling
+   Dark theme + blue accents
+   ========================================================================== */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Header Styling (safe for your pages)
+   ========================================================================== */
+header {
+  background: linear-gradient(135deg, #0f172a 0%, #111827 100%);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #1f2937;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #0d6efd;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  header {
+    padding: 1.8rem 1rem;
+  }
+  header h1 {
+    font-size: 2.3rem;
+  }
+}
+
+/* ==========================================================================
+   Main Container – Controls left spacing & max width
+   ========================================================================== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem 5rem 5.5rem;     /* generous left space */
+  /* Change 5.5rem → 6rem / 7rem for even more left margin */
+}
+
+/* Sections & Vertical Spacing */
+main section {
+  margin-bottom: 5rem;
+}
+
+/* ==========================================================================
+   Headings – only inside main
+   ========================================================================== */
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+main h2 {
+  font-size: 1.95rem;
+  border-left: 5px solid #0d6efd;
+  padding-left: 1.2rem;
+  margin: 3.5rem 0 1.6rem;
+}
+
+main h3 {
+  font-size: 1.55rem;
+  color: #60a5fa;
+  margin-bottom: 1.1rem;
+}
+
+/* ==========================================================================
+   Links – scoped to main
+   ========================================================================== */
+main a {
+  color: #60a5fa;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+main a:hover,
+main a:focus {
+  color: #ffffff !important;
+  background-color: #0d6efd;
+  padding: 3px 8px;
+  border-radius: 5px;
+  box-shadow: 0 4px 14px rgba(13, 110, 253, 0.4);
+}
+
+/* ==========================================================================
+   Updated Button Styles – Modern gradient + hover effect
+   ========================================================================== */
+main .button,
+main .button.small {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d6efd 0%, #2563eb 100%);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.25);
+}
+
+main .button:hover,
+main .button.small:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.5);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+main .button.small {
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   Cards & Grids – only inside main
+   ========================================================================== */
+main .version-grid,
+main .download-buttons,
+main .screenshot-grid {
+  display: grid;
+  gap: 2.2rem 2rem;
+  margin: 2.5rem 0 4rem 0;
+}
+
+main .version-grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+main .version-card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 2.1rem 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+
+main .version-card:hover {
+  border-color: #3b82f6;
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(13, 110, 253, 0.25);
+}
+
+main .version-card p {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+main .version-card .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+main .download-buttons {
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+
+/* ==========================================================================
+   Lists, Notes, Warnings – scoped to main
+   ========================================================================== */
+main ul,
+main ol {
+  margin: 1.4rem 0 2rem 2.2rem;
+  color: #d1d5db;
+}
+
+main li {
+  margin-bottom: 0.85rem;
+}
+
+main .note {
+  background: #1f2937;
+  padding: 1.4rem 1.6rem;
+  border-radius: 10px;
+  border-left: 5px solid #0d6efd;
+  margin: 1.8rem 0;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+main .warning-box {
+  background: #1e1b2e;
+  border: 1px solid #7c3aed;
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin: 2.5rem 0;
+}
+
+main .warning-box strong {
+  color: #f87171;
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.15rem;
+}
+
+/* ==========================================================================
+   Video & Screenshot Grid
+   ========================================================================== */
+main .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+  margin: 2.2rem 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.55);
+}
+
+main .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main .screenshot-grid {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.2rem;
+}
+
+main .screenshot-grid img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #2d3748;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: all 0.35s ease;
+}
+
+main .screenshot-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 34px rgba(13, 110, 253, 0.3);
+}
+
+/* ==========================================================================
+   Responsive – only affects content inside main
+   ========================================================================== */
+@media (max-width: 1024px) {
+  main {
+    padding-left: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem 1.5rem 4rem 3rem;
+  }
+
+  main h2 { font-size: 1.8rem; }
+  
+  main .version-grid,
+  main .download-buttons,
+  main .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  main .button,
+  main .button.small {
+    width: 100%;
+  }
+}

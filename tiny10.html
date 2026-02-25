@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/os.css" />
+  </head>
+  <body>
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="pic/logo3.png"
+            alt="Logo"
+            width="54"
+            height="42"
+            class="me-2"
+          />
+          <span style="font-size: 1.75rem; font-weight: bold; color: #ffffff">
+            Tech&nbsp;
+          </span>
+          <!--<span style="font-size: 1.75rem; font-weight: bold; color: #bb0000">
+            Sergeant
+          </span>-->
+          <span style="font-size: 1.75rem; font-weight: bold; color: #0278ff">
+            Sergeant
+          </span>
+        </a>
+
+        <!-- Toggler for mobile (THIS IS REQUIRED!) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Left side: Navigation links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="windows.html">Windows</a>
+                </li>
+                <li><a class="dropdown-item" href="linux.html">Linux</a></li>
+                <li>
+                  <a class="dropdown-item" href="chrome.html">Chrome OS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="windows-10-LTSC.html"
+                    >Windows 10 LTSC</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="tiny10.html">Tiny 10</a></li>
+                <li><a class="dropdown-item" href="tiny11.html">Tiny 11</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solution.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Right side: Search + Admin Login -->
+
+          <a href="admin-login.html" class="btn">
+            <img
+              src="pic/ad1.png"
+              alt="Logo"
+              width="40"
+              height="35"
+              class="0"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!--main body -->
+
+    <header>
+      <h1>Download & Install Tiny10 Easily Now!</h1>
+    </header>
+
+    <main>
+      <section id="description">
+        <h2>About Tiny10</h2>
+        <p>
+          Tiny10 is an unofficial, heavily modified and stripped-down version of
+          Windows 10, created by developer NTDEV (known for tiny11 as well).
+        </p>
+        <p>It is designed for:</p>
+        <ul>
+          <li>Very low-end / old hardware</li>
+          <li>Low RAM and storage usage</li>
+          <li>Maximum performance on weak PCs</li>
+          <li>Minimal bloatware and background services</li>
+        </ul>
+        <p class="note important">
+          Tiny10 is **not** an official Microsoft product. It is a
+          community-modified build. Use at your own risk. Always scan files and
+          understand that it may miss features, updates, or have compatibility
+          issues.
+        </p>
+      </section>
+
+      <section id="requirements">
+        <h2>System Requirements (Tiny10 is very lightweight)</h2>
+        <p>
+          Compared to normal Windows 10, Tiny10 runs on much weaker hardware:
+        </p>
+        <ul>
+          <li>
+            CPU: Any x86 / x64 processor (even single-core from ~2008+ works)
+          </li>
+          <li>
+            RAM: 1 GB minimum (2 GB+ recommended – runs acceptably on 1 GB)
+          </li>
+          <li>Storage: ~5–10 GB installed (vs 20+ GB for normal Win10)</li>
+          <li>Graphics: Basic DirectX 9 compatible GPU</li>
+          <li>Internet: Recommended for drivers / activation</li>
+        </ul>
+        <p class="note">
+          Tiny10 is especially good for reviving old laptops, netbooks, thin
+          clients, or running in VMs with low resources.
+        </p>
+      </section>
+
+      <section id="downloads">
+        <h2>Download Links (Unofficial – Use Caution)</h2>
+        <p>
+          Tiny10 is mainly distributed via Internet Archive uploads by NTDEV or
+          community mirrors. There is no single "official" site in 2026.
+        </p>
+        <div class="download-buttons">
+          <a
+            href="https://archive.org/details/tiny-10-23-h2"
+            target="_blank"
+            class="button"
+            >Tiny10 23H2 (Most Recent Stable – Recommended)</a
+          >
+          <a
+            href="https://archive.org/details/tiny-10-NTDEV"
+            target="_blank"
+            class="button"
+            >Tiny10 Older Builds (1809 / 21H2 / 22H2)</a
+          >
+          <a
+            href="https://archive.org/search?query=tiny10+NTDEV"
+            target="_blank"
+            class="button"
+            >Search All Tiny10 Uploads on Archive.org</a
+          >
+        </div>
+        <p class="warning">
+          Always verify file hashes if provided • Download only from archive.org
+          or trusted sources • Avoid random third-party sites claiming "tiny10
+          2026" – high risk of malware.
+        </p>
+      </section>
+
+      <section id="steps">
+        <h2>Step-by-Step: Download & Install Tiny10</h2>
+        <ol>
+          <li>
+            Backup all important data on the target computer – installation
+            usually wipes the drive.
+          </li>
+          <li>
+            Download the Tiny10 ISO from one of the links above (choose x64 for
+            modern PCs, x86 for very old 32-bit hardware).
+          </li>
+          <li>
+            Verify the file (optional but strongly recommended):
+            <ul>
+              <li>
+                Check SHA256 / MD5 hash if provided in the archive description
+              </li>
+              <li>
+                Windows: Use <code>certutil -hashfile tiny10.iso SHA256</code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Create a bootable USB (see next section – Rufus or Ventoy
+            recommended).
+          </li>
+          <li>
+            Insert USB → Restart target PC → Enter boot menu (F12, F10, Esc, F2…
+            depends on brand).
+          </li>
+          <li>Boot from the USB drive.</li>
+          <li>
+            Follow the Windows setup:
+            <ul>
+              <li>Choose language & region</li>
+              <li>Select "Custom install" if you want to partition/format</li>
+              <li>
+                Delete old partitions if doing clean install → select
+                unallocated space → Next
+              </li>
+            </ul>
+          </li>
+          <li>Wait for files to copy and automatic reboots (10–25 minutes).</li>
+          <li>
+            Complete OOBE setup (username, etc.) – no Microsoft account required
+            in most builds.
+          </li>
+          <li>
+            After first boot: install drivers (chipset, GPU, network) manually
+            if needed.
+          </li>
+        </ol>
+        <p class="note">
+          Tiny10 usually skips most telemetry/telephone-home steps and has no
+          forced updates by default.
+        </p>
+      </section>
+
+      <section id="iso-burning">
+        <h2>How to Create Bootable USB from Tiny10 ISO</h2>
+        <p>Use the same tools as normal Windows ISOs:</p>
+
+        <h3>1. Rufus (Recommended – Windows)</h3>
+        <ol>
+          <li>
+            Download Rufus →
+            <a href="https://rufus.ie/" target="_blank">https://rufus.ie</a>
+          </li>
+          <li>Insert USB drive (≥4 GB, will be erased!)</li>
+          <li>Select Tiny10 ISO file</li>
+          <li>
+            Partition scheme: GPT (UEFI) or MBR (Legacy) depending on your PC
+          </li>
+          <li>Click START → wait 3–8 minutes</li>
+        </ol>
+
+        <h3>2. Ventoy (Best for multiple ISOs – cross-platform)</h3>
+        <ol>
+          <li>
+            Install Ventoy on USB →
+            <a href="https://www.ventoy.net/" target="_blank"
+              >https://www.ventoy.net</a
+            >
+          </li>
+          <li>Just copy the Tiny10 .iso file to the USB</li>
+          <li>Boot → select Tiny10 from Ventoy menu</li>
+        </ol>
+
+        <div class="warning-box">
+          <strong>Critical Warnings:</strong>
+          <ul>
+            <li>
+              Tiny10 is **unofficial** → potential stability/security risks
+            </li>
+            <li>USB drive will be completely wiped during creation</li>
+            <li>
+              Full installation usually erases target disk – back up everything
+            </li>
+            <li>
+              No official Microsoft support or future security updates
+              guaranteed
+            </li>
+            <li>
+              Activation: may need manual key or script (some builds include
+              auto-activation)
+            </li>
+            <li>Download only from archive.org or trusted NTDEV links</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="video">
+        <h2>Video Installation Guide (Tiny10 23H2 Example)</h2>
+        <div class="video-container">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/28GIIc5NQDI"
+            title="Tiny10 23H2 Installation Guide"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>
+          <small
+            >Shows complete download → USB → install process (relevant in
+            2026)</small
+          >
+        </p>
+      </section>
+
+      <!--<section id="screenshots">
+        <h2>Screenshot Guidance</h2>
+        <div class="screenshot-grid">
+          <img
+            src="https://i.ytimg.com/vi/28GIIc5NQDI/maxresdefault.jpg"
+            alt="Tiny10 23H2 Desktop"
+          />
+          <img
+            src="https://beebom.com/wp-content/uploads/2022/08/tiny10-desktop.jpg"
+            alt="Tiny10 Clean Desktop"
+          />
+          <img
+            src="https://www.partitionwizard.com/images/news/tiny10-installation.jpg"
+            alt="Tiny10 Setup Screen"
+          />
+          <img
+            src="https://archive.org/download/tiny-10-23-h2/tiny10-23h2-screenshot.jpg"
+            alt="Tiny10 Explorer View"
+          />
+        </div>
+      </section>
+    --></main>
+    <footer>
+      <div class="footer-bottom">
+        <div class="container-fluid px-3 px-md-4 px-lg-5">
+          <!-- ← controlled padding -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="copyright">
+              © 2026 <span class="brand-tech">Tech&nbsp;</span
+              ><span class="brand-sergeant">Sergeant</span>
+              – Student project by Mirza Muntasir Mahmud
+            </div>
+
+            <div class="footer-utils">
+              <a href="#" class="back-to-top" aria-label="Back to top">
+                Back to Top ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

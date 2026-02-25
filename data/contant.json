@@ -1,0 +1,23 @@
+{
+  "carouselImages": [
+    {"src": "pic/1.jpg", "alt": "Slide 1", "type": "local"},
+    {"src": "pic/2.jpg", "alt": "Slide 2", "type": "local"}
+  ],
+  "homeCards": [
+    {"title": "OS Guides", "desc": "Explore OS installation guides", "link": "os.html"},
+    {"title": "Solutions", "desc": "Tech solutions and videos", "link": "solution.html"}
+  ],
+  "footerDesc": "© 2026 Tech Sergeant – Student project by Mirza Muntasir Mahmud",
+  "solutionCards": [
+    {"id": 1, "title": "Video 1", "desc": "Description", "mediaType": "youtube", "media": "https://www.youtube.com/embed/example", "detailContent": "Full details here..."}
+  ],
+  "aboutContent": {
+    "name": "Mirza Muntasir Mahmud",
+    "subtitle": "Student Developer",
+    "bio": "Your bio text...",
+    "profilePhoto": "pic/profile.jpg",
+    "siteDesc": "Site description...",
+    "techList": ["HTML", "CSS", "JS", "Bootstrap"],
+    "credits": "Credits text..."
+  }
+}

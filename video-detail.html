@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <!-- If you have global styles -->
+
+    <!-- Custom CSS for video detail - matching dark/blue glassmorphism theme -->
+    <style>
+      /* ────────────────────────────────────────────────
+       Video Detail Page – Matched theme
+       Glassmorphism, blue accents, responsive layout
+       ──────────────────────────────────────────────── */
+      :root {
+        --bg: #060b14;
+        --surface: #0d1526;
+        --surface2: #111c35;
+        --border: #1a2744;
+        --blue: #0278ff;
+        --blue-dim: rgba(2, 120, 255, 0.12);
+        --blue-glow: rgba(2, 120, 255, 0.28);
+        --text: #e2e8f0;
+        --muted: #64748b;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Inter", sans-serif;
+        min-height: 100vh;
+      }
+
+      /* Top Nav */
+      .topnav {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .brand {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .brand span {
+        color: var(--blue);
+      }
+
+      .brand-icon {
+        width: 34px;
+        height: 34px;
+        background: linear-gradient(135deg, var(--blue), #0050cc);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 0.85rem;
+      }
+
+      .btn-back {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-back:hover {
+        background: var(--blue-dim);
+        border-color: var(--blue);
+        color: white;
+      }
+
+      /* Main Content */
+      .container {
+        max-width: 1400px;
+        padding: 2rem 1.5rem 5rem;
+      }
+
+      /* Video Player Wrapper */
+      .video-wrapper {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+        aspect-ratio: 16 / 9; /* Maintain ratio for both video and iframe */
+      }
+
+      video,
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* Details */
+      #detailTitle {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-top: 1.5rem;
+      }
+
+      #detailDesc {
+        font-size: 1.1rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .metadata {
+        display: flex;
+        gap: 1.5rem;
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin-top: 1rem;
+      }
+
+      /* Related Videos - Glassmorphism cards */
+      .related-section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        height: fit-content;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      .related-section h4 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+        color: var(--text);
+      }
+
+      .related-card {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid var(--border);
+        text-decoration: none;
+        color: var(--text);
+        transition: background 0.2s;
+      }
+
+      .related-card:last-child {
+        border-bottom: none;
+      }
+
+      .related-card:hover {
+        background: var(--blue-dim);
+      }
+
+      .related-thumb {
+        width: 80px;
+        height: 45px;
+        background: var(--surface2);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .related-thumb i {
+        font-size: 1.5rem;
+        color: var(--blue);
+      }
+
+      .related-title {
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.3;
+        margin-bottom: 0.3rem;
+      }
+
+      .related-cat {
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      /* Responsive - Stack on mobile */
+      @media (max-width: 992px) {
+        .related-section {
+          margin-top: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Nav -->
+    <div class="topnav">
+      <a href="index.html" class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        Tech <span>Sergeant</span>
+      </a>
+      <a href="solution.html" class="btn-back">
+        <i class="fa-solid fa-arrow-left"></i> Back to Solutions
+      </a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+      <div class="row">
+        <!-- Left: Video + Details -->
+        <div class="col-md-8">
+          <div class="video-wrapper mb-4" id="playerWrapper">
+            <!-- Player will be injected here based on type -->
+          </div>
+
+          <h3 id="detailTitle"></h3>
+          <p id="detailDesc"></p>
+          <div class="metadata">
+            <span
+              ><i class="fa-solid fa-tag me-1"></i
+              ><span id="detailCategory"></span
+            ></span>
+            <span
+              ><i class="fa-solid fa-calendar me-1"></i
+              ><span id="detailDate"></span
+            ></span>
+            <span
+              ><i class="fa-solid fa-hdd me-1"></i><span id="detailSize"></span
+            ></span>
+          </div>
+        </div>
+
+        <!-- Right: Related Videos -->
+        <div class="col-md-4">
+          <div class="related-section">
+            <h4>Related Solutions</h4>
+            <div id="relatedList">
+              <!-- Related cards injected here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get video ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const videoId = Number(urlParams.get("id"));
+
+      // Load and display video
+      function loadVideo() {
+        const videos = JSON.parse(localStorage.getItem("ts_videos") || "[]");
+        const video = videos.find((v) => v.id === videoId);
+
+        if (!video) {
+          document.body.innerHTML =
+            '<div class="container text-center py-5"><h3>Video not found</h3><a href="solution.html" class="btn-back">Back to Solutions</a></div>';
+          return;
+        }
+
+        document.title = `${video.title} — Tech Sergeant`;
+
+        // Dynamically create player based on type
+        const playerWrapper = document.getElementById("playerWrapper");
+        if (video.type === "local") {
+          playerWrapper.innerHTML = `
+            <video id="videoPlayer" controls>
+              <source src="${video.videoData}" type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+          `;
+        } else if (video.type === "youtube") {
+          playerWrapper.innerHTML = `
+            <iframe src="${video.videoData}" frameborder="0" allowfullscreen></iframe>
+          `;
+        }
+
+        // Details
+        document.getElementById("detailTitle").textContent = video.title;
+        document.getElementById("detailDesc").textContent =
+          video.desc || "No description";
+        document.getElementById("detailCategory").textContent =
+          video.category || "General";
+        document.getElementById("detailDate").textContent = new Date(
+          video.uploadedAt,
+        ).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+        document.getElementById("detailSize").textContent = formatSize(
+          video.fileSize,
+        );
+
+        // Related videos (exclude current)
+        const related = videos.filter((v) => v.id !== videoId);
+        const relatedList = document.getElementById("relatedList");
+
+        if (related.length === 0) {
+          relatedList.innerHTML =
+            '<p class="text-muted">No related videos available.</p>';
+        } else {
+          relatedList.innerHTML = related
+            .map(
+              (v) => `
+            <a href="video-detail.html?id=${v.id}" class="related-card">
+              <div class="related-thumb"><i class="fa-solid fa-play"></i></div>
+              <div>
+                <div class="related-title">${v.title}</div>
+                <div class="related-cat">${v.category || "General"}</div>
+              </div>
+            </a>
+          `,
+            )
+            .join("");
+        }
+      }
+
+      // Helper: Format file size
+      function formatSize(bytes) {
+        if (!bytes) return "Unknown";
+        if (bytes > 1024 * 1024)
+          return (bytes / (1024 * 1024)).toFixed(1) + " MB";
+        return (bytes / 1024).toFixed(1) + " KB";
+      }
+
+      loadVideo();
+    </script>
+  </body>
+</html>

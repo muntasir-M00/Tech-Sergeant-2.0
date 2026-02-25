@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/os.css" />
+  </head>
+  <body>
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="pic/logo3.png"
+            alt="Logo"
+            width="54"
+            height="42"
+            class="me-2"
+          />
+          <span style="font-size: 1.75rem; font-weight: bold; color: #ffffff">
+            Tech&nbsp;
+          </span>
+          <!--<span style="font-size: 1.75rem; font-weight: bold; color: #bb0000">
+            Sergeant
+          </span>-->
+          <span style="font-size: 1.75rem; font-weight: bold; color: #0278ff">
+            Sergeant
+          </span>
+        </a>
+
+        <!-- Toggler for mobile (THIS IS REQUIRED!) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Left side: Navigation links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="windows.html">Windows</a>
+                </li>
+                <li><a class="dropdown-item" href="linux.html">Linux</a></li>
+                <li>
+                  <a class="dropdown-item" href="chrome.html">Chrome OS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="windows-10-LTSC.html"
+                    >Windows 10 LTSC</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="tiny10.html">Tiny 10</a></li>
+                <li><a class="dropdown-item" href="tiny11.html">Tiny 11</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solution.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Right side: Search + Admin Login -->
+
+          <a href="admin-login.html" class="btn">
+            <img
+              src="pic/ad1.png"
+              alt="Logo"
+              width="40"
+              height="35"
+              class="0"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!--for news using RSS.app-->
+    <section class="container my-5">
+      <rssapp-wall id="VsztkHLbsvHVudJp"></rssapp-wall>
+      <script
+        src="https://widget.rss.app/v1/wall.js"
+        type="text/javascript"
+        async
+      ></script>
+    </section>
+    <!--===================================================
+=                                 footer--
+=====>================================================-->
+    <footer>
+      <div class="footer-bottom">
+        <div class="container-fluid px-3 px-md-4 px-lg-5">
+          <!-- ← controlled padding -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="copyright">
+              © 2026 <span class="brand-tech">Tech&nbsp;</span
+              ><span class="brand-sergeant">Sergeant</span>
+              – Student project by Mirza Muntasir Mahmud
+            </div>
+
+            <div class="footer-utils">
+              <a href="#" class="back-to-top" aria-label="Back to top">
+                Back to Top ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

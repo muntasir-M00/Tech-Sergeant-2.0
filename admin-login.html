@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login — Tech Sergeant</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Admin Login Stylesheet — place this file in your /style/ folder -->
+    <link rel="stylesheet" href="style/admin-login.css" />
+  </head>
+  <body>
+    <!-- Login Card -->
+    <div class="login-card">
+      <!-- Header -->
+      <div class="login-card-header">
+        <div>
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="brand" style="text-align: center; margin-left: 3rem">
+          <a href="index.html" class="login-brand">
+            <img src="pic/logo3.png" alt="Tech Sergeant Logo" />
+            <span class="brand-tech">Tech&nbsp;</span>
+            <span class="brand-sergeant">Sergeant</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="loginForm" autocomplete="off" novalidate>
+        <!-- Username -->
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-user field-icon"></i>
+            <input
+              type="text"
+              id="username"
+              placeholder="admin"
+              required
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-lock field-icon"></i>
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              required
+              autocomplete="off"
+            />
+            <button
+              type="button"
+              class="eye-btn"
+              id="eyeBtn"
+              aria-label="Toggle password visibility"
+            >
+              <i class="fa-solid fa-eye" id="eyeIcon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-login" id="loginBtn">
+          <i class="fa-solid fa-right-to-bracket"></i>
+          Login
+        </button>
+
+        <!-- Error message -->
+        <div class="login-error" id="loginError">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="errorText">Invalid username or password.</span>
+        </div>
+      </form>
+
+      <!-- Back to site -->
+      <a href="index.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Back to website
+      </a>
+    </div>
+
+    <!-- Page footer -->
+    <div class="login-footer">
+      © 2026 <span class="brand-tech">Tech&nbsp;</span
+      ><span class="brand-sergeant">Sergeant</span>
+      — Student project by Mirza Muntasir Mahmud
+    </div>
+
+    <script>
+      // ── Credentials — change these to your own ───────────────────────────
+      const ADMIN_USERNAME = "admin";
+      const ADMIN_PASSWORD = "techsergeant2026";
+
+      // ── Redirect if already logged in ────────────────────────────────────
+      if (localStorage.getItem("ts_admin_logged_in") === "true") {
+        window.location.href = "admin-panel.html";
+      }
+
+      // ── Eye toggle ────────────────────────────────────────────────────────
+      const eyeBtn = document.getElementById("eyeBtn");
+      const eyeIcon = document.getElementById("eyeIcon");
+      const passInput = document.getElementById("password");
+
+      eyeBtn.addEventListener("click", () => {
+        const hidden = passInput.type === "password";
+        passInput.type = hidden ? "text" : "password";
+        eyeIcon.className = hidden
+          ? "fa-solid fa-eye-slash"
+          : "fa-solid fa-eye";
+      });
+
+      // ── Login form ────────────────────────────────────────────────────────
+      document.getElementById("loginForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value;
+        const btn = document.getElementById("loginBtn");
+        const errorBox = document.getElementById("loginError");
+
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fa-solid fa-spinner"></i> Authenticating...';
+        errorBox.classList.remove("show");
+
+        setTimeout(() => {
+          if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+            localStorage.setItem("ts_admin_logged_in", "true");
+            localStorage.setItem("ts_admin_user", username);
+            localStorage.setItem(
+              "ts_admin_login_time",
+              new Date().toISOString(),
+            );
+
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Access Granted!';
+            setTimeout(() => {
+              window.location.href = "admin-panel.html";
+            }, 600);
+          } else {
+            btn.disabled = false;
+            btn.innerHTML =
+              '<i class="fa-solid fa-right-to-bracket"></i> Login';
+            document.getElementById("errorText").textContent =
+              "Invalid username or password. Please try again.";
+            errorBox.classList.add("show");
+            passInput.value = "";
+            passInput.focus();
+          }
+        }, 800);
+      });
+    </script>
+  </body>
+</html>

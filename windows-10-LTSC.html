@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/os.css" />
+  </head>
+  <body>
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="pic/logo3.png"
+            alt="Logo"
+            width="54"
+            height="42"
+            class="me-2"
+          />
+          <span style="font-size: 1.75rem; font-weight: bold; color: #ffffff">
+            Tech&nbsp;
+          </span>
+          <!--<span style="font-size: 1.75rem; font-weight: bold; color: #bb0000">
+            Sergeant
+          </span>-->
+          <span style="font-size: 1.75rem; font-weight: bold; color: #0278ff">
+            Sergeant
+          </span>
+        </a>
+
+        <!-- Toggler for mobile (THIS IS REQUIRED!) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Left side: Navigation links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="windows.html">Windows</a>
+                </li>
+                <li><a class="dropdown-item" href="linux.html">Linux</a></li>
+                <li>
+                  <a class="dropdown-item" href="chrome.html">Chrome OS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="windows-10-LTSC.html"
+                    >Windows 10 LTSC</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="tiny10.html">Tiny 10</a></li>
+                <li><a class="dropdown-item" href="tiny11.html">Tiny 11</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solution.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Right side: Search + Admin Login -->
+
+          <a href="admin-login.html" class="btn">
+            <img
+              src="pic/ad1.png"
+              alt="Logo"
+              width="40"
+              height="35"
+              class="0"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!--mainbody-->
+
+    <header>
+      <h1>Download & Install Windows 10 LTSC Easily Now!</h1>
+    </header>
+
+    <main>
+      <section id="description">
+        <h2>About Windows 10 LTSC</h2>
+        <p>
+          Windows 10 Enterprise LTSC (Long-Term Servicing Channel) is a special
+          edition of Windows 10 designed for stability and long support periods.
+        </p>
+        <p>Main characteristics (2026 status):</p>
+        <ul>
+          <li>
+            Very few feature updates – receives only security & quality updates
+          </li>
+          <li>
+            No Microsoft Store, Cortana, Edge (pre-installed), OneDrive, mixed
+            reality, etc.
+          </li>
+          <li>Long support lifecycle (usually 10 years per release)</li>
+          <li>
+            Ideal for: medical devices, ATMs, industrial systems, kiosks,
+            embedded systems, or users who want minimal changes
+          </li>
+          <li>More lightweight than regular Windows 10 editions</li>
+        </ul>
+        <p class="note">
+          LTSC is **not** intended for general home / office desktop use. It is
+          a volume-licensed enterprise edition.
+        </p>
+      </section>
+
+      <section id="versions">
+        <h2>Windows 10 LTSC Releases Still Relevant in 2026</h2>
+        <div class="version-grid">
+          <div class="version-card">
+            <h3>Windows 10 LTSC 2021</h3>
+            <p>Build 19044 • Based on 21H2 • Support until January 2032</p>
+          </div>
+          <div class="version-card">
+            <h3>Windows 10 IoT Enterprise LTSC 2021</h3>
+            <p>Same core as LTSC 2021 • Extra embedded features</p>
+          </div>
+          <div class="version-card">
+            <h3>Windows 10 Enterprise LTSC 2019</h3>
+            <p>Build 17763 • Support until January 2029</p>
+          </div>
+        </div>
+        <p class="note">
+          No new LTSC release is expected for the classic Windows 10 branch
+          after 2021 (Microsoft shifted focus to Windows 11 IoT LTSC).
+        </p>
+      </section>
+
+      <section id="requirements">
+        <h2>System Requirements</h2>
+        <p>Same as standard Windows 10:</p>
+        <ul>
+          <li>Processor: 1 GHz or faster</li>
+          <li>RAM: 1 GB (32-bit) or 2 GB (64-bit)</li>
+          <li>Storage: 16 GB (32-bit) or 20 GB (64-bit)</li>
+          <li>Graphics: DirectX 9 compatible with WDDM 1.0 driver</li>
+          <li>Display: 800×600 resolution</li>
+        </ul>
+        <p>
+          → In practice LTSC 2021 runs very well on hardware from ~2010–2015
+          thanks to removed bloat.
+        </p>
+      </section>
+
+      <section id="downloads">
+        <h2>Official & Legal Download Options</h2>
+        <p>
+          Windows 10 LTSC is only officially distributed through Microsoft
+          Volume Licensing (VL), MSDN/Visual Studio subscriptions, or authorized
+          partners.
+        </p>
+        <div class="download-buttons">
+          <a
+            href="https://www.microsoft.com/en-us/evalcenter/download-windows-10-enterprise"
+            target="_blank"
+            class="button"
+            >Microsoft Evaluation Center – Windows 10 Enterprise (includes LTSC
+            trial)</a
+          >
+          <a
+            href="https://www.microsoft.com/licensing/servicecenter/default.aspx"
+            target="_blank"
+            class="button"
+            >Volume Licensing Service Center (if you have VL agreement)</a
+          >
+          <a
+            href="https://visualstudio.microsoft.com/subscriptions/"
+            target="_blank"
+            class="button"
+            >Visual Studio / MSDN Subscriber Downloads</a
+          >
+        </div>
+        <p class="warning">
+          Public ISO downloads from third-party sites are usually **not legal**
+          unless you own a valid LTSC product key. Evaluation ISOs expire after
+          90 days unless activated with a real license.
+        </p>
+      </section>
+
+      <section id="steps">
+        <h2>Step-by-Step: Download & Install Windows 10 LTSC</h2>
+        <ol>
+          <li>
+            Obtain a legitimate license or evaluation access (VL, MSDN, partner,
+            etc.).
+          </li>
+          <li>
+            Download the correct LTSC ISO:
+            <ul>
+              <li>Evaluation → from Microsoft Evaluation Center</li>
+              <li>Full version → VLSC or MSDN portal</li>
+            </ul>
+          </li>
+          <li>
+            Verify ISO integrity (compare SHA256 hash provided by Microsoft).
+          </li>
+          <li>Create bootable USB (see next section).</li>
+          <li>Backup all data on the target computer.</li>
+          <li>
+            Boot from USB (restart → boot menu key: F12 / Esc / F10 / F2…).
+          </li>
+          <li>Choose language, time, keyboard → click "Install now".</li>
+          <li>
+            Enter product key when asked (or skip and activate later if
+            evaluation).
+          </li>
+          <li>Select "Custom: Install Windows only" for clean install.</li>
+          <li>Delete/format target partition(s) → select space → Next.</li>
+          <li>Wait for installation (15–35 min) → automatic reboots.</li>
+          <li>Complete setup (username, network, privacy settings).</li>
+          <li>Activate with valid LTSC key if not done during install.</li>
+        </ol>
+      </section>
+
+      <section id="iso-burning">
+        <h2>How to Create Bootable USB from LTSC ISO</h2>
+        <p>Use the same tools as regular Windows 10:</p>
+
+        <h3>Rufus (Recommended)</h3>
+        <ol>
+          <li>
+            Download →
+            <a href="https://rufus.ie/" target="_blank">https://rufus.ie</a>
+          </li>
+          <li>Insert USB ≥8 GB (will be erased)</li>
+          <li>Select LTSC ISO</li>
+          <li>Partition scheme: GPT (UEFI) or MBR (Legacy BIOS)</li>
+          <li>Click START</li>
+        </ol>
+
+        <h3>Ventoy (Multi-ISO convenience)</h3>
+        <ol>
+          <li>
+            Install Ventoy on USB →
+            <a href="https://www.ventoy.net/" target="_blank"
+              >https://www.ventoy.net</a
+            >
+          </li>
+          <li>Copy LTSC .iso to the USB</li>
+          <li>Boot and select the ISO from Ventoy menu</li>
+        </ol>
+
+        <div class="warning-box">
+          <strong>Important Warnings:</strong>
+          <ul>
+            <li>USB will be completely erased during creation</li>
+            <li>
+              Full installation usually wipes the target disk – back up
+              everything
+            </li>
+            <li>
+              LTSC requires a valid **Enterprise LTSC** product key for
+              permanent activation
+            </li>
+            <li>
+              Evaluation builds expire after 90 days without proper licensing
+            </li>
+            <li>
+              Avoid unofficial "LTSC lite / debloated" ISOs from random sources
+              – high malware risk
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="video">
+        <h2>Video Installation Guide (Windows 10 LTSC 2021)</h2>
+        <div class="video-container">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/9zQb4E3zL8M"
+            title="Windows 10 LTSC 2021 Installation Guide"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p><small>Process is almost identical in 2026 for LTSC 2021</small></p>
+      </section>
+      <!--
+      <section id="screenshots">
+        <h2>Screenshot Guidance</h2>
+        <div class="screenshot-grid">
+          <img
+            src="https://i.imgur.com/3XvK9pL.png"
+            alt="Windows 10 LTSC 2021 Clean Desktop"
+          />
+          <img
+            src="https://learn.microsoft.com/en-us/windows/iot/iot-enterprise/media/ltsc2021-desktop.png"
+            alt="LTSC 2021 Setup Screen"
+          />
+          <img
+            src="https://www.tenforums.com/attachments/installation-upgrade/378956d1634567890t-windows-10-enterprise-ltsc-2021-installation.jpg"
+            alt="LTSC Installation Wizard"
+          />
+          <img
+            src="https://www.partitionwizard.com/images/news/windows-10-ltsc-2021.jpg"
+            alt="LTSC Task Manager – Low Resource Usage"
+          />
+        </div>
+      </section>
+    --></main>
+
+    <footer>
+      <div class="footer-bottom">
+        <div class="container-fluid px-3 px-md-4 px-lg-5">
+          <!-- ← controlled padding -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="copyright">
+              © 2026 <span class="brand-tech">Tech&nbsp;</span
+              ><span class="brand-sergeant">Sergeant</span>
+              – Student project by Mirza Muntasir Mahmud
+            </div>
+
+            <div class="footer-utils">
+              <a href="#" class="back-to-top" aria-label="Back to top">
+                Back to Top ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+/* ==========================================================================
+   Admin Login Page — Tech Sergeant
+   Matches main site theme: dark bg, blue accent, system font
+   ========================================================================== */
+
+/* ── Root Variables (mirrors main.css) ─────────────────────────────────── */
+:root {
+  --primary-blue: #0278ff;
+  --blue-glow: rgba(10, 186, 255, 0.5);
+  --blue-dim: rgba(31, 31, 31, 0.1);
+  --dark-bg: #0f0f0f;
+  --darker-bg: #0a0a0a;
+  --surface: #141414;
+  --surface2: #1a1a1a;
+  --border-dark: #222;
+  --border-blue: #016bcf;
+  --text-light: #e0e0e0;
+  --text-secondary: #aaa;
+  --danger: #dc3545;
+  --danger-dim: rgba(220, 53, 69, 0.12);
+}
+
+/* ── Reset ──────────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Body ───────────────────────────────────────────────────────────────── */
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  line-height: 1.6;
+
+  /* Subtle dot grid like the site's carousel bg feel */
+  background-image: radial-gradient(
+    circle,
+    rgba(2, 120, 255, 0.04) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* ── Top Brand Bar ──────────────────────────────────────────────────────── */
+.login-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  text-decoration: none;
+}
+
+.login-brand img {
+  width: 48px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.brand-tech {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.brand-sergeant {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  letter-spacing: -0.02em;
+}
+
+/* ── Login Card ─────────────────────────────────────────────────────────── */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--border-blue);
+  border-radius: 16px;
+  padding: 2.25rem 2rem;
+  position: relative;
+  overflow: hidden;
+
+  /* Same glow effect as carousel-frame in main.css */
+  box-shadow:
+    0 0 5px var(--blue-glow),
+    0 0 20px rgba(10, 186, 255, 0.2),
+    inset 0 0 10px rgba(10, 186, 255, 0.04);
+
+  transition: box-shadow 0.4s ease;
+}
+
+.login-card:hover {
+  box-shadow:
+    0 0 8px var(--blue-glow),
+    0 0 35px rgba(10, 186, 255, 0.3),
+    inset 0 0 14px rgba(10, 186, 255, 0.06);
+}
+
+/* Top accent stripe */
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+}
+
+/* ── Card Header ────────────────────────────────────────────────────────── */
+.login-card-header {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.login-card-header h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
+}
+
+.login-card-header p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.lock-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--blue-dim);
+  border: 1px solid rgba(2, 120, 255, 0.25);
+  margin-bottom: 1rem;
+  color: var(--primary-blue);
+  font-size: 1.4rem;
+}
+
+/* ── Form ───────────────────────────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap .field-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #444;
+  font-size: 0.88rem;
+  pointer-events: none;
+  transition: color 0.2s;
+}
+
+.input-wrap:focus-within .field-icon {
+  color: var(--primary-blue);
+}
+
+.input-wrap input {
+  width: 100%;
+  background: var(--surface2);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 0.78rem 2.8rem 0.78rem 2.6rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.input-wrap input::placeholder {
+  color: #444;
+}
+
+.input-wrap input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(2, 120, 255, 0.15),
+              0 0 8px rgba(10, 186, 255, 0.2);
+}
+
+/* Eye toggle button */
+.eye-btn {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #444;
+  font-size: 0.88rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.eye-btn:hover {
+  color: var(--text-secondary);
+}
+
+/* ── Login Button ───────────────────────────────────────────────────────── */
+.btn-login {
+  width: 100%;
+  background: var(--primary-blue);
+  border: none;
+  border-radius: 8px;
+  padding: 0.82rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background 0.25s, box-shadow 0.25s, transform 0.2s;
+}
+
+.btn-login:hover:not(:disabled) {
+  background: #0262d4;
+  box-shadow: 0 6px 20px rgba(2, 120, 255, 0.4),
+              0 0 12px var(--blue-glow);
+  transform: translateY(-1px);
+}
+
+.btn-login:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ── Error Alert ────────────────────────────────────────────────────────── */
+.login-error {
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--danger-dim);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  color: #f08090;
+  font-size: 0.83rem;
+  margin-top: 0.9rem;
+}
+
+.login-error.show {
+  display: flex;
+}
+
+/* ── Hint Box ───────────────────────────────────────────────────────────── */
+.credentials-hint {
+  background: var(--surface2);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.credentials-hint strong {
+  color: var(--primary-blue);
+}
+
+/* ── Back Link ──────────────────────────────────────────────────────────── */
+.back-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
+.back-link i {
+  margin-right: 0.3rem;
+}
+
+/* ── Divider ────────────────────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border-dark);
+  margin: 1.25rem 0;
+}
+
+/* ── Footer bar (same style as site footer-bottom) ─────────────────────── */
+.login-footer {
+  margin-top: 2rem;
+  color: #555;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.login-footer .brand-tech  { color: #ffffff; font-size: inherit; }
+.login-footer .brand-sergeant { color: var(--primary-blue); font-size: inherit; }
+
+/* ── Spinner ────────────────────────────────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+  animation: spin 0.7s linear infinite;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .brand-tech,
+  .brand-sergeant {
+    font-size: 1.45rem;
+  }
+}

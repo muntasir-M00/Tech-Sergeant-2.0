@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/about-me.css" />
+  </head>
+  <body>
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="pic/logo3.png"
+            alt="Logo"
+            width="54"
+            height="42"
+            class="me-2"
+          />
+          <span style="font-size: 1.75rem; font-weight: bold; color: #ffffff">
+            Tech&nbsp;
+          </span>
+          <!--<span style="font-size: 1.75rem; font-weight: bold; color: #bb0000">
+            Sergeant
+          </span>-->
+          <span style="font-size: 1.75rem; font-weight: bold; color: #0278ff">
+            Sergeant
+          </span>
+        </a>
+
+        <!-- Toggler for mobile (THIS IS REQUIRED!) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Left side: Navigation links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+           
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="windows.html">Windows</a>
+                </li>
+                <li><a class="dropdown-item" href="linux.html">Linux</a></li>
+                <li>
+                  <a class="dropdown-item" href="chrome.html">Chrome OS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="windows-10-LTSC.html"
+                    >Windows 10 LTSC</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="tiny10.html">Tiny 10</a></li>
+                <li><a class="dropdown-item" href="tiny11.html">Tiny 11</a></li>
+              </ul>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="solution.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Right side: Search + Admin Login -->
+
+          <a href="admin-login.html" class="btn ">
+  <img
+            src="pic/ad1.png"
+            alt="Logo"
+            width="40"
+            height="35"
+            class="0"
+          />
+</a>
+
+        </div>
+      </div>
+    </nav>
+
+  <!--=====================================================
+                             main
+  ==================================================--> 
+<main class="about-me">
+  <section class="hero-section">
+    <div class="profile-container">
+      <img id="profilePhoto" src="your-photo.jpg" alt="Profile Photo" class="profile-photo">
+      <div class="bio">
+        <h1 id="bioName">Mirza Muntasir Mahmud</h1>
+        <p class="subtitle" id="bioSubtitle">Student &amp; Tech Enthusiast from Feni, Bangladesh</p>
+        <p id="bioParagraph">
+          I'm a passionate student dedicated to exploring technology and solving real-world problems. As part of my academic journey, I created TechSergeant—a platform to share my knowledge and help others with tech challenges. When not coding or troubleshooting, I enjoy building AI projects and staying updated with the latest in software and hardware innovations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="site-description">
+    <h2 id="siteSectionTitle">About TechSergeant</h2>
+    <p id="siteSectionDesc">
+      TechSergeant is a student project website designed to provide practical tech solutions for laptops and desktops. It focuses on resolving hardware and software issues—primarily software-related—with detailed video guidance and step-by-step written processes. Additionally, the site offers comprehensive guides for installing various operating systems, including Windows, Linux, Chrome OS, Tiny10/11, and Windows 10 LTSC.
+    </p>
+  </section>
+
+<section class="technologies">
+  <h2>Technologies Used</h2>
+  <div class="technologies-grid" id="techTagsGrid">
+    <div class="tech-item">HTML5 &amp; CSS3</div>
+    <div class="tech-item">Bootstrap 5</div>
+    <div class="tech-item">JavaScript</div>
+    <div class="tech-item">Custom Animations</div>
+    <div class="tech-item">Font Awesome Icons</div>
+    <div class="tech-item">Responsive Design</div>
+    <div class="tech-item">Git &amp; GitHub</div>
+    <div class="tech-item">Hosted on GitHub Pages</div>
+  </div>
+</section>
+
+  <section class="credits">
+    <h2>Credits</h2>
+    <p id="creditsText">
+      Special thanks to open-source communities, Bootstrap team, and AI tools like Grok by xAI for inspiration and assistance in development. All content is original or properly attributed. Icons from Font Awesome. Placeholder images from Unsplash.
+    </p>
+  </section>
+</main>
+
+<script>
+  // Load about data from localStorage (saved by admin panel)
+  (function() {
+    try {
+      const data = JSON.parse(localStorage.getItem('ts_about') || '{}');
+      const img = localStorage.getItem('ts_about_img');
+
+      if (data.name) document.getElementById('bioName').textContent = data.name;
+      if (data.subtitle) document.getElementById('bioSubtitle').textContent = data.subtitle;
+      if (data.bio) document.getElementById('bioParagraph').textContent = data.bio;
+      if (data.siteTitle) document.getElementById('siteSectionTitle').textContent = data.siteTitle;
+      if (data.siteDesc) document.getElementById('siteSectionDesc').textContent = data.siteDesc;
+      if (data.credits) document.getElementById('creditsText').textContent = data.credits;
+
+      // Tech tags
+      if (data.techTags && data.techTags.length > 0) {
+        const grid = document.getElementById('techTagsGrid');
+        grid.innerHTML = data.techTags.map(tag => `<div class="tech-item">${tag}</div>`).join('');
+      }
+
+      // Profile image
+      if (img) {
+        document.getElementById('profilePhoto').src = img;
+      }
+    } catch(e) {
+      console.warn('Could not load about data from localStorage:', e);
+    }
+  })();
+</script>
+
+<!--=============================================
+                        footer
+================================================-->
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand & short summary -->
+        <div class="col-lg-5">
+          <div class="footer-brand">
+            <span class="brand-tech">Tech&nbsp;</span><span class="brand-sergeant">Sergeant</span>
+          </div>
+          <p class="footer-summary">
+            A student project created by <strong>Mirza Muntasir Mahmud</strong> to help people understand, install 
+            and troubleshoot operating systems with simple guides and clear explanations.
+          </p>
+        </div>
+
+         <!-- Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6>Navigation</h6>
+          <ul>
+            <li><a href="solution.html">Solutions</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- OS Guides -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h6>OS Guides</h6>
+          <ul>
+            <li><a href="windows.html">Windows</a></li>
+            <li><a href="linux.html">Linux</a></li>
+            <li><a href="chrome-os.html">Chrome OS</a></li>
+            <li><a href="windows-10-ltsc.html">Windows 10 LTSC</a></li>
+            <li><a href="tiny10-tiny11.html">Tiny10 / Tiny11</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Legal -->
+        <!-- Contact & Legal -->
+<div class="col-md-4 col-lg-3">
+  <h6>Contact</h6>
+  <ul>
+    <li>
+      <a href="#" class="text-secondary text-decoration-none hover-text-danger">
+        <span class="__cf_email__" data-cfemail="caa7bfa4beabb9a3b8a7aea0a5b3f8ff8aada7aba3a6e4a9a5a7">[email&#160;protected]</span>
+      </a>
+    </li>
+    <li><a href="#" class="text-secondary text-decoration-none hover-text-danger">Privacy Policy</a></li>
+  </ul>
+
+
+  <!-- Social icons remain below or can be removed if you prefer text links only -->
+  <div class="social-icons mt-4">
+    <a href="https://github.com/muntasir-M00" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.026 1.592 1.026 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.478-10-10-10z"/></svg>
+    </a>
+    <a href="https://www.facebook.com/muntasir.mahmud.951723" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/mun_tasir_00?igsh=MXhpZmZkYXVjOWxyZw==" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.228.228 2.695.072 7.053.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.156 4.358 2.623 6.825 6.981 6.981C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.358-.156 6.825-2.623 6.981-6.981.058-1.28.072-1.689.072-4.948 0-3.259-.014-3.667-.072-4.947-.156-4.358-2.623-6.825-6.981-6.981C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/></svg>
+    </a>
+  </div>
+</div>
+</footer>
+  <footer>
+      <div class="footer-bottom">
+        <div class="container-fluid px-3 px-md-4 px-lg-5">
+          <!-- ← controlled padding -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="copyright">
+              © 2026 <span class="brand-tech">Tech&nbsp;</span
+              ><span class="brand-sergeant">Sergeant</span>
+              – Student project by Mirza Muntasir Mahmud
+            </div>
+
+            <div class="footer-utils">
+              <a href="#" class="back-to-top" aria-label="Back to top">
+                Back to Top ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/c

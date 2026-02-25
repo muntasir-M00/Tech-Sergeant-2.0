@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/os.css" />
+  </head>
+  <body>
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="pic/logo3.png"
+            alt="Logo"
+            width="54"
+            height="42"
+            class="me-2"
+          />
+          <span style="font-size: 1.75rem; font-weight: bold; color: #ffffff">
+            Tech&nbsp;
+          </span>
+          <!--<span style="font-size: 1.75rem; font-weight: bold; color: #bb0000">
+            Sergeant
+          </span>-->
+          <span style="font-size: 1.75rem; font-weight: bold; color: #0278ff">
+            Sergeant
+          </span>
+        </a>
+
+        <!-- Toggler for mobile (THIS IS REQUIRED!) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Left side: Navigation links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="windows.html">Windows</a>
+                </li>
+                <li><a class="dropdown-item" href="linux.html">Linux</a></li>
+                <li>
+                  <a class="dropdown-item" href="chrome.html">Chrome OS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="windows-10-LTSC.html"
+                    >Windows 10 LTSC</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="tiny10.html">Tiny 10</a></li>
+                <li><a class="dropdown-item" href="tiny11.html">Tiny 11</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solution.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Right side: Search + Admin Login -->
+
+          <a href="admin-login.html" class="btn">
+            <img
+              src="pic/ad1.png"
+              alt="Logo"
+              width="40"
+              height="35"
+              class="0"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!--main body -->
+    <header>
+      <h1>Download & Install Tiny11 Easily Now!</h1>
+    </header>
+
+    <main>
+      <section id="description">
+        <h2>About Tiny11</h2>
+        <p>
+          Tiny11 is an unofficial, heavily debloated and lightweight
+          modification of Windows 11, originally created by developer NTDEV (and
+          later maintained / extended by community contributors).
+        </p>
+        <p>
+          It removes most bloatware, telemetry, unnecessary apps, and services
+          while keeping core Windows functionality. Goals:
+        </p>
+        <ul>
+          <li>Run Windows 11 on unsupported / low-end hardware</li>
+          <li>Very low RAM & storage usage (often ~8–12 GB installed)</li>
+          <li>Faster performance on old PCs, netbooks, VMs</li>
+          <li>No forced Microsoft account, fewer background processes</li>
+        </ul>
+        <p class="note important">
+          Tiny11 is **not** official Microsoft software. It is a
+          community-modified build. Use it at your own risk — potential
+          stability, security, update, or compatibility issues exist. Always
+          scan downloads and prefer building your own image when possible.
+        </p>
+      </section>
+
+      <section id="requirements">
+        <h2>System Requirements (Much lower than stock Windows 11)</h2>
+        <p>
+          Tiny11 can run on hardware that doesn't meet official Windows 11
+          specs:
+        </p>
+        <ul>
+          <li>
+            CPU: Any x64 processor (even older ones without TPM/Secure Boot)
+          </li>
+          <li>
+            RAM: 2 GB minimum (runs decently on 2–4 GB; 1 GB possible in some
+            builds)
+          </li>
+          <li>Storage: ~8–15 GB installed (vs 20–30 GB for normal Win11)</li>
+          <li>Graphics: Basic DirectX 9+ compatible GPU</li>
+          <li>
+            Internet: Helpful for drivers & future updates (not mandatory)
+          </li>
+        </ul>
+        <p class="note">
+          Excellent for reviving old laptops, thin clients, or running in
+          virtual machines with limited resources.
+        </p>
+      </section>
+
+      <section id="downloads">
+        <h2>Download Links (Unofficial – Extreme Caution Required)</h2>
+        <p>
+          Pre-built Tiny11 ISOs are mainly shared via Internet Archive
+          (archive.org) uploads. There is no single "official" download site in
+          2026.
+        </p>
+        <div class="download-buttons">
+          <a
+            href="https://archive.org/details/tiny11versions"
+            target="_blank"
+            class="button"
+            >Tiny11 Versions Collection (NTDEV + Community – 2025/2026
+            builds)</a
+          >
+          <a
+            href="https://archive.org/details/tiny-11-24-h-2-x-64-26100.1742"
+            target="_blank"
+            class="button"
+            >Tiny11 24H2 (x64 – Popular 2025 build)</a
+          >
+          <a
+            href="https://archive.org/download/tiny11_25H2"
+            target="_blank"
+            class="button"
+            >Tiny11 25H2 Builds (Latest community uploads Nov/Oct 2025)</a
+          >
+          <a
+            href="https://archive.org/search?query=tiny11+NTDEV+25H2+OR+26H2"
+            target="_blank"
+            class="button"
+            >Search Latest Tiny11 on Archive.org</a
+          >
+        </div>
+        <p class="warning">
+          Only download from archive.org or trusted NTDEV-related sources. Avoid
+          random sites / torrents claiming "tiny11 2026" — high malware risk.
+          Verify hashes when available.
+        </p>
+        <p>
+          Alternative (safer): Download official Windows 11 ISO → use
+          <a href="https://github.com/ntdevlabs/tiny11builder" target="_blank"
+            >Tiny11 Builder script</a
+          >
+          to create your own debloated version.
+        </p>
+      </section>
+
+      <section id="steps">
+        <h2>Step-by-Step: Download & Install Tiny11</h2>
+        <ol>
+          <li>
+            Back up **all** important data — installation typically wipes the
+            target drive.
+          </li>
+          <li>
+            Download a Tiny11 ISO (x64 recommended for most PCs) from links
+            above.
+          </li>
+          <li>
+            Verify the file (strongly advised):
+            <ul>
+              <li>Compare SHA256/MD5 hash if listed in archive description</li>
+              <li>
+                Windows command:
+                <code>certutil -hashfile tiny11.iso SHA256</code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Create bootable USB (see next section – Rufus or Ventoy preferred).
+          </li>
+          <li>
+            Insert USB → Restart target PC → Enter boot menu (usually F12, F10,
+            Esc, F2… check your model).
+          </li>
+          <li>
+            Boot from USB (may need to disable Secure Boot in BIOS for some
+            older machines).
+          </li>
+          <li>
+            Follow Windows setup:
+            <ul>
+              <li>Select language, region, keyboard</li>
+              <li>Choose "Custom: Install Windows only" for clean install</li>
+              <li>
+                Delete/format old partitions if desired → select space → Next
+              </li>
+            </ul>
+          </li>
+          <li>
+            Installation copies files & reboots several times (10–30 minutes).
+          </li>
+          <li>
+            Complete basic setup (username, etc.) — most builds skip Microsoft
+            account requirement.
+          </li>
+          <li>
+            After boot: install missing drivers (network, GPU, etc.) manually if
+            needed.
+          </li>
+        </ol>
+        <p class="note">
+          Many Tiny11 builds allow offline/local account setup and have
+          telemetry/services already removed or disabled.
+        </p>
+      </section>
+
+      <section id="iso-burning">
+        <h2>How to Create Bootable USB from Tiny11 ISO</h2>
+        <p>Use the same tools as standard Windows ISOs:</p>
+
+        <h3>1. Rufus (Recommended – Windows)</h3>
+        <ol>
+          <li>
+            Download →
+            <a href="https://rufus.ie/" target="_blank">https://rufus.ie</a>
+          </li>
+          <li>Insert USB (≥8 GB – will be erased!)</li>
+          <li>Select Tiny11 ISO</li>
+          <li>Partition: GPT (UEFI) or MBR (Legacy) based on your PC</li>
+          <li>Click START → wait 5–10 min</li>
+        </ol>
+
+        <h3>2. Ventoy (Best for testing multiple ISOs)</h3>
+        <ol>
+          <li>
+            Install Ventoy on USB →
+            <a href="https://www.ventoy.net/" target="_blank"
+              >https://www.ventoy.net</a
+            >
+          </li>
+          <li>Copy Tiny11 .iso to the USB</li>
+          <li>Boot → choose Tiny11 from menu</li>
+        </ol>
+
+        <div class="warning-box">
+          <strong>Critical Warnings:</strong>
+          <ul>
+            <li>
+              Tiny11 is **unofficial** → no Microsoft support, possible
+              security/stability risks
+            </li>
+            <li>USB drive will be wiped during creation</li>
+            <li>
+              Installation usually erases target disk — back up everything first
+            </li>
+            <li>
+              Future Windows updates may break compatibility or re-add removed
+              components
+            </li>
+            <li>
+              Activation: Some builds auto-activate; others need valid
+              key/script
+            </li>
+            <li>Download **only** from archive.org or verified sources</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="video">
+        <h2>Video Installation Guide (Tiny11 25H2 / Recent Example)</h2>
+        <div class="video-container">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/0LJPHqPjqcw"
+            title="Tiny11 25H2 Download & Install Guide"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>
+          <small
+            >Shows download → USB creation → installation (relevant for
+            2025–2026 builds)</small
+          >
+        </p>
+      </section>
+      <!--
+      <section id="screenshots">
+        <h2>Screenshot Guidance</h2>
+        <div class="screenshot-grid">
+          <img
+            src="https://i.ytimg.com/vi/0LJPHqPjqcw/maxresdefault.jpg"
+            alt="Tiny11 25H2 Setup Screen"
+          />
+          <img
+            src="https://ntdotdev.wordpress.com/wp-content/uploads/2023/12/tiny11-desktop.png"
+            alt="Tiny11 Clean Desktop"
+          />
+          <img
+            src="https://archive.org/download/tiny-11-24-h-2-x-64-26100.1742/tiny11-24h2-screenshot.jpg"
+            alt="Tiny11 Explorer & Task Manager"
+          />
+          <img
+            src="https://www.youtube.com/watch?v=zMxoY4ophEk/maxresdefault.jpg"
+            alt="Tiny11 Installation Process"
+          />
+        </div>
+      </section>
+    --></main>
+
+    <footer>
+      <div class="footer-bottom">
+        <div class="container-fluid px-3 px-md-4 px-lg-5">
+          <!-- ← controlled padding -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="copyright">
+              © 2026 <span class="brand-tech">Tech&nbsp;</span
+              ><span class="brand-sergeant">Sergeant</span>
+              – Student project by Mirza Muntasir Mahmud
+            </div>
+
+            <div class="footer-utils">
+              <a href="#" class="back-to-top" aria-label="Back to top">
+                Back to Top ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

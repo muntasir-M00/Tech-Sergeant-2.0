@@ -1,0 +1,372 @@
+/* ==========================================================================
+   1. ROOT VARIABLES & GLOBAL SETTINGS
+   ========================================================================== */
+:root {
+  --primary-blue: #0278ff;           /* Main accent color used across site */
+  --dark-bg: #0f0f0f;               /* Main body background */
+  --darker-bg: #0a0a0a;             /* Footer & darker sections */
+  --text-light: #e0e0e0;            /* Primary text */
+  --text-secondary: #aaa;           /* Secondary/lighter text */
+  --border-dark: #222;              /* Borders & dividers */
+  --shadow-blue: rgba(10, 186, 255, 0.5); /* blue glow/shadow */
+}
+
+/* ==========================================================================
+   2. BASE & RESET STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+/* ==========================================================================
+   CAROUSEL – Smaller height + perfect rounded corners on all sides
+   ========================================================================== */
+
+/* Outer container – creates left/right gaps */
+.carousel-container {
+  max-width: 1400px;
+  margin: 1.5rem auto;           /* reduced top/bottom margin */
+  padding: 0 1rem;
+}
+
+/* Frame – border + rounding */
+.carousel-frame {
+  overflow: hidden;
+  border: 1px solid #016bcf;           /* your blue border */
+  border-radius: 16px;
+  background: #160909;
+  
+  /* Glow effect – main addition */
+  box-shadow: 
+    0 0 5px rgba(10, 186, 255, 0.5),     /* outer soft blue glow */
+    0 0 15px rgba(10, 186, 255, 0.5),     /* larger spread glow */
+    inset 0 0 10px rgba(10, 186, 255, 0.5); /* subtle inner glow */
+
+  transition: box-shadow 0.4s ease;    /* smooth on hover */
+}
+
+/* Ensure everything inside clips to the rounded shape */
+.carousel-wrapper,
+.carousel-track {
+  overflow: hidden;
+  border-radius: inherit;
+  height: 100%;
+}
+
+/* Images – half height + force rounding */
+.carousel-track img {
+  width: 100%;
+  height: 160px;                 /* ← half of original ~320px */
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.50;
+  filter: blur(2px);
+  transition: all 0.6s ease;
+  border-radius: inherit;        /* ← critical: makes bottom corners round too */
+  flex-shrink: 0;
+}
+
+/* Hover – brighten & unblur */
+.carousel-frame:hover .carousel-track img {
+  opacity: 0.85;
+  filter: blur(1px);
+}
+
+/* Animation (your infinite slide) */
+
+.carousel-container {
+  overflow: hidden;           /* very important – must hide overflow */
+  width: 100%;
+  max-width: 1200px;          /* or whatever your design wants */
+}
+
+.carousel-frame {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;         /* critical */
+  animation: slide 32s linear infinite;   /* slower = easier to see if working */
+  will-change: transform;
+}
+
+@keyframes slide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive – even smaller on mobile */
+@media (max-width: 768px) {
+  .carousel-track img {
+    height: 130px;               /* smaller on tablet/phone */
+  }
+  .carousel-frame {
+    border-width: 2px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-track img {
+    height: 110px;
+  }
+}
+
+/* ==========================================================================
+   4. HERO TEXT / OVERLAY STYLES
+   ========================================================================== */
+.hero-text-container {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+
+
+
+
+/* ==========================================================================
+   5. CARD STYLES
+   ========================================================================== */
+.bg-gradient-dark {
+  background: linear-gradient(135deg, #1f1f1f 0%, #000000 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px var(--shadow-blue) !important;
+}
+
+.card-title {
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--primary-blue);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.card:hover .card-title::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ==========================================================================
+   6. FOOTER STYLES
+   ========================================================================== */
+.site-footer {
+  background: var(--dark-bg);
+  border-top: 1px solid var(--border-dark);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.footer-top {
+  padding: 4rem 0 3rem;
+}
+
+.footer-brand {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.brand-tech {
+  color: #ffffff;
+}
+
+.brand-sergeant {
+  color: var(--primary-blue);
+}
+
+.footer-summary {
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.site-footer h6 {
+  color: #eee;
+  font-size: 1.05rem;
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: 2.1;
+}
+
+/*hover for the contact link in footer*/
+.hover-text-danger:hover {
+    color: #dc3545 !important;      
+    transition: color 0.2s ease;    
+}
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.social-link {
+  color: var(--text-primary);
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+.social-link svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+
+.social-link:hover {
+  color: var(--primary-blue);
+  transform: translateY(-2px);
+}
+
+
+
+.footer-bottom {
+  background: var(--darker-bg);
+  border-top: 1px solid #1a1a1a;
+  width: 100%;                    /* make sure it takes full viewport width */
+}
+
+/* Most important part: full bleed background + constrained content */
+.footer-bottom .container-fluid {
+  --side-padding: 1.25rem;        /* ≈20px on mobile, feels good */
+
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  max-width: 1400px;              /* or 1320px, 1440px — your choice */
+  margin-left: auto;
+  margin-right:  auto;
+}
+
+/* Optional: more generous padding on larger screens */
+@media (min-width: 992px) {
+  .footer-bottom .container-fluid {
+    --side-padding: 3rem;
+  }
+}
+
+.copyright {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.back-to-top {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.back-to-top:hover {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Custom Scrollbar Styling – Tech Sergeant dark/blue theme
+   Works in Chrome, Edge, Brave, Opera (WebKit browsers)
+   Firefox support included at the bottom
+   ========================================================================== */
+
+/* ────────────────────────────────────────────────
+   Scrollbar SIZE
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 10px;           /* ← width of vertical scrollbar */
+  height: 10px;          /* ← height of horizontal scrollbar (rarely visible) */
+}
+
+/* ────────────────────────────────────────────────
+   TRACK (the background / groove behind the thumb)
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar-track {
+  background: #0a0e17;                  /* ← main track background color (very dark) */
+  border-left: 1px solid #1a2744;       /* ← subtle left border color */
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); /* inner shadow – optional */
+}
+
+/* ────────────────────────────────────────────────
+   THUMB (the draggable bar you actually move)
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar-thumb {
+  background: #1e3a5f;                  /* ← normal / idle thumb color (dark blue-gray) */
+  border-radius: 10px;
+  border: 2px solid #0a0e17;            /* ← border around thumb – same as track for padding effect */
+}
+
+/* ────────────────────────────────────────────────
+   THUMB :HOVER (when mouse is over it)
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar-thumb:hover {
+  background: #0278ff;                  /* ← HOVER color – your brand blue */
+  border: 2px solid #0a0e17;
+  box-shadow: 0 0 10px rgba(2, 120, 255, 0.4); /* glow color – blue-ish */
+}
+
+/* ────────────────────────────────────────────────
+   THUMB :ACTIVE (when you are dragging it)
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar-thumb:active {
+  background: #005acc;                  /* ← ACTIVE / clicked color – darker blue */
+}
+
+/* ────────────────────────────────────────────────
+   CORNER (where vertical + horizontal scrollbars meet – rare)
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar-corner {
+  background: #0a0e17;                  /* ← corner background color */
+}
+
+/* ────────────────────────────────────────────────
+   FIREFOX support (modern method – scrollbar-color + scrollbar-width)
+   Format: thumb-color track-color
+   ──────────────────────────────────────────────── */
+html {
+  scrollbar-width: thin;                    /* thin | auto | none */
+  scrollbar-color: #1e3a5f #0a0e17;        /* thumb   track */
+  /*               ↑         ↑
+      thumb color     track color
+  */
+}

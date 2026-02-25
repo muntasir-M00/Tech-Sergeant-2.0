@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tech Sergeant</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/os.css" />
+  </head>
+  <body>
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <!--nav bar with the image and the text-->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="pic/logo3.png"
+            alt="Logo"
+            width="54"
+            height="42"
+            class="me-2"
+          />
+          <span style="font-size: 1.75rem; font-weight: bold; color: #ffffff">
+            Tech&nbsp;
+          </span>
+          <!--<span style="font-size: 1.75rem; font-weight: bold; color: #bb0000">
+            Sergeant
+          </span>-->
+          <span style="font-size: 1.75rem; font-weight: bold; color: #0278ff">
+            Sergeant
+          </span>
+        </a>
+
+        <!-- Toggler for mobile (THIS IS REQUIRED!) -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Left side: Navigation links -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                OS
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="windows.html">Windows</a>
+                </li>
+                <li><a class="dropdown-item" href="linux.html">Linux</a></li>
+                <li>
+                  <a class="dropdown-item" href="chrome.html">Chrome OS</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="windows-10-LTSC.html"
+                    >Windows 10 LTSC</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="tiny10.html">Tiny 10</a></li>
+                <li><a class="dropdown-item" href="tiny11.html">Tiny 11</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="solution.html">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+          </ul>
+
+          <!-- Right side: Search + Admin Login -->
+
+          <a href="admin-login.html" class="btn">
+            <img
+              src="pic/ad1.png"
+              alt="Logo"
+              width="40"
+              height="35"
+              class="0"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <h1>Download & Install Linux Easily Now!</h1>
+    </header>
+
+    <main>
+      <section id="description">
+        <h2>About Linux</h2>
+        <p>
+          Linux is a free, open-source operating system kernel that powers
+          millions of servers, desktops, phones, and devices worldwide. Linux
+          **distributions** (distros) bundle the kernel with software, desktop
+          environments, and tools to create a complete OS.
+        </p>
+        <p>Popular in 2025–2026 for being:</p>
+        <ul>
+          <li>Completely free & open source</li>
+          <li>Highly customizable</li>
+          <li>Very secure & stable</li>
+          <li>Lightweight (runs well on old hardware)</li>
+          <li>No forced updates or telemetry</li>
+        </ul>
+      </section>
+
+      <section id="popular-distros">
+        <h2>Most Popular Linux Distributions (2025–2026)</h2>
+        <p>
+          Here are some of the most beginner-friendly and widely used distros
+          right now:
+        </p>
+        <div class="version-grid">
+          <div class="version-card">
+            <h3>Ubuntu</h3>
+            <p>
+              Most popular • Excellent for beginners • Huge community & software
+              support
+            </p>
+            <a
+              href="https://mirror.xeonbd.com/ubuntu-releases/24.04.4/ubuntu-24.04.4-desktop-amd64.iso"
+              target="_blank"
+              class="button small"
+              >Download Ubuntu</a
+            >
+          </div>
+          <div class="version-card">
+            <h3>Linux Mint</h3>
+            <p>Feels like Windows • Very user-friendly • Based on Ubuntu</p>
+            <a
+              href="https://linuxmint.com/download.php"
+              target="_blank"
+              class="button small"
+              >Download Linux Mint</a
+            >
+          </div>
+          <div class="version-card">
+            <h3>Fedora</h3>
+            <p>
+              Modern & cutting-edge • Great for developers • Sponsored by Red
+              Hat
+            </p>
+            <a
+              href="https://fedoraproject.org/workstation/download/"
+              target="_blank"
+              class="button small"
+              >Download Fedora</a
+            >
+          </div>
+          <div class="version-card">
+            <h3>Pop!_OS</h3>
+            <p>
+              Beautiful interface • Excellent NVIDIA support • Made by System76
+            </p>
+            <a
+              href="https://pop.system76.com/"
+              target="_blank"
+              class="button small"
+              >Download Pop!_OS</a
+            >
+          </div>
+          <div class="version-card">
+            <h3>Debian</h3>
+            <p>Rock-solid stability • Basis for Ubuntu & many others</p>
+            <a
+              href="https://www.debian.org/distrib/"
+              target="_blank"
+              class="button small"
+              >Download Debian</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="requirements">
+        <h2>General System Requirements</h2>
+        <p>
+          Most modern Linux distros run well on modest hardware. Typical
+          minimums (2025–2026):
+        </p>
+        <ul>
+          <li>CPU: 2 GHz dual-core (64-bit) or better</li>
+          <li>RAM: 4 GB (8 GB+ strongly recommended)</li>
+          <li>Storage: 20–30 GB free space (SSD preferred)</li>
+          <li>Graphics: Any GPU from the last 10–15 years works</li>
+          <li>Internet: Helpful for updates & drivers (not always required)</li>
+        </ul>
+        <p class="note">
+          → Linux Mint or Ubuntu can run acceptably on 2–4 GB RAM machines from
+          ~2015.
+        </p>
+      </section>
+
+      <!--<section id="downloads">
+        <h2>Official Download Links</h2>
+        <p>
+          Always download from the **official websites** to avoid
+          modified/malicious ISOs.
+        </p>
+        <div class="download-buttons">
+          <a
+            href="https://ubuntu.com/download/desktop"
+            target="_blank"
+            class="button"
+            >Ubuntu Desktop (Most Recommended)</a
+          >
+          <a
+            href="https://linuxmint.com/download.php"
+            target="_blank"
+            class="button"
+            >Linux Mint</a
+          >
+          <a
+            href="https://fedoraproject.org/workstation/download/"
+            target="_blank"
+            class="button"
+            >Fedora Workstation</a
+          >
+          <a href="https://pop.system76.com/" target="_blank" class="button"
+            >Pop!_OS</a
+          >
+        </div>
+      </section>
+        -->
+      <section id="steps">
+        <h2>Step-by-Step: Download & Install Linux</h2>
+        <ol>
+          <li>
+            Choose a distribution from above (Ubuntu or Mint recommended for
+            beginners).
+          </li>
+          <li>
+            Download the ISO file from the official link (usually 2–4 GB).
+          </li>
+          <li>
+            Verify the ISO (optional but recommended):
+            <ul>
+              <li>Check SHA256 hash on the download page vs. your file</li>
+              <li>
+                Windows: <code>certutil -hashfile filename.iso SHA256</code>
+              </li>
+              <li>Linux/macOS: <code>sha256sum filename.iso</code></li>
+            </ul>
+          </li>
+          <li>Create a bootable USB (see next section).</li>
+          <li>Backup all important data on the target computer!</li>
+          <li>
+            Insert USB → Restart PC → Enter boot menu (usually F12, F10, Esc,
+            F2… depends on brand).
+          </li>
+          <li>Select the USB drive to boot from it.</li>
+          <li>Try the "Live" mode first (test without installing).</li>
+          <li>
+            When ready → double-click "Install" icon on desktop → follow wizard.
+          </li>
+          <li>
+            Choose language, keyboard, disk partitioning (erase disk = easiest
+            for beginners), timezone, username/password.
+          </li>
+          <li>
+            Wait for installation (10–30 min) → reboot → remove USB → enjoy
+            Linux!
+          </li>
+        </ol>
+      </section>
+
+      <section id="iso-burning">
+        <h2>How to Create Bootable USB from Linux ISO</h2>
+        <p>Recommended tools in 2025–2026 (all free):</p>
+
+        <h3>1. Ventoy (Best multi-ISO solution – highly recommended)</h3>
+        <ol>
+          <li>
+            Download Ventoy from
+            <a href="https://www.ventoy.net/" target="_blank"
+              >https://www.ventoy.net</a
+            >
+          </li>
+          <li>Run Ventoy2Disk.exe (Windows) or Ventoy2Disk.sh (Linux)</li>
+          <li>Select your USB drive → Install Ventoy (erases USB!)</li>
+          <li>After install → just copy any .iso files to the USB</li>
+          <li>Boot from USB → Ventoy menu appears → choose your Linux ISO</li>
+        </ol>
+
+        <h3>2. Rufus (Classic & reliable – Windows only)</h3>
+        <ol>
+          <li>
+            Download from
+            <a href="https://rufus.ie/" target="_blank">https://rufus.ie</a>
+          </li>
+          <li>Insert USB (≥8 GB)</li>
+          <li>Select ISO → Start → wait 5–10 min</li>
+        </ol>
+
+        <h3>3. balenaEtcher (Simple – cross-platform)</h3>
+        <ol>
+          <li>
+            Download from
+            <a href="https://etcher.balena.io/" target="_blank"
+              >https://etcher.balena.io</a
+            >
+          </li>
+          <li>Flash ISO to USB → done</li>
+        </ol>
+
+        <div class="warning-box">
+          <strong>Warnings – Important!</strong>
+          <ul>
+            <li>Creating bootable USB **erases everything** on the drive!</li>
+            <li>Backup USB data first</li>
+            <li>Use only official ISOs from trusted websites</li>
+            <li>Do not interrupt writing process</li>
+            <li>
+              Some older PCs may need "Legacy/CSM" boot mode instead of UEFI
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="video">
+        <h2>Video Installation Guide (Ubuntu example)</h2>
+        <div class="video-container">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/x8sPuBSUgR0"
+            title="Ubuntu Installation Guide 2025"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p>
+          <small
+            >Video shows Ubuntu 24.04 / 25.xx style install (very similar in
+            2026)</small
+          >
+        </p>
+      </section>
+    </main>
+    <!-- <section id="screenshots">
+        <h2>Screenshot Guidance</h2>
+        <div class="screenshot-grid">
+          <img
+            src="https://distrowatch.com/images/yhgmospfpfybanoslinuxmintwgm.png"
+            alt="Linux Mint Desktop"
+          />
+          <img
+            src="https://ubuntu.com/wp-content/uploads/2024/04/ubuntu-24-04-noble-numbat-hero.jpg"
+            alt="Ubuntu 24.04 Desktop"
+          />
+          <img
+            src="https://pop.system76.com/assets/pop-os-screenshot-1.jpg"
+            alt="Pop!_OS COSMIC Desktop"
+          />
+          <img
+            src="https://getfedora.org/static/images/workstation/screenshot-1.jpg"
+            alt="Fedora Workstation"
+          />
+        </div>
+      </section>
+    
+    <!-===================================================
+=                                 footer--
+=====>================================================-->
+
+    <footer>
+      <div class="footer-bottom">
+        <div class="container-fluid px-3 px-md-4 px-lg-5">
+          <!-- ← controlled padding -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <div class="copyright">
+              © 2026 <span class="brand-tech">Tech&nbsp;</span
+              ><span class="brand-sergeant">Sergeant</span>
+              – Student project by Mirza Muntasir Mahmud
+            </div>
+
+            <div class="footer-utils">
+              <a href="#" class="back-to-top" aria-label="Back to top">
+                Back to Top ↑
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
